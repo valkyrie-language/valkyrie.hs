@@ -1,5 +1,5 @@
 [package]
-name = "line-chart"
+name = "ggplot-core"
 version = "0.0.0"
 authors = ["Aster <192607617@qq.com>"]
 description = "..."
@@ -11,7 +11,10 @@ edition = "2021"
 exclude = ["package.json", "tests/**"]
 
 [dependencies]
-svg = "0.14.0"
+
+[dependencies.svg]
+optional = true
+version = "0.14.0"
 
 [dependencies.serde]
 optional = true
@@ -21,7 +24,7 @@ features = ["derive"]
 [dev-dependencies]
 
 [features]
-default = []
+default = ["svg"]
 
 [package.metadata.docs.rs]
 all-features = true

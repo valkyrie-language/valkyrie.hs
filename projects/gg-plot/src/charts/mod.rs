@@ -1,35 +1,20 @@
-use std::ops::Range;
-use std::slice::Iter;
-use std::sync::Arc;
+use self::bar_chart::BarChartInner;
+use ggplot_core::Style;
+use std::{ops::Range, slice::Iter, sync::Arc};
 use svg::Document;
-use self::data::BarChartInner;
 
-mod data;
-
+mod bar_chart;
 
 /// [ListLinePlot](https://reference.wolfram.com/language/ref/ListLinePlot.html)
 pub struct BarChart {
     pub kind: BarChartType,
-    pub left_space: f64,
-    pub right_space: f64,
-    pub bar_width: f64,
-    pub bar_space: f64,
-    pub group_space: f64,
+    pub left_space: f32,
+    pub right_space: f32,
+    pub bar_width: f32,
+    pub bar_space: f32,
+    pub group_space: f32,
     pub x_range: Style<Range<f64>>,
     pub y_range: Style<Range<f64>>,
-}
-
-#[derive(Default)]
-pub enum Style<T> {
-    ///
-    Initial,
-    /// Adopt the same settings as the parent node
-    #[default]
-    Inherit,
-    ///
-    Custom(Box<T>),
-    ///
-    Shared(Arc<T>),
 }
 
 #[derive(Default)]

@@ -5,6 +5,17 @@
 #![doc(html_favicon_url = "https://raw.githubusercontent.com/oovm/shape-rs/dev/projects/images/Trapezohedron.svg")]
 
 mod errors;
-mod line_chart;
+mod shapes;
+mod traits;
 
-pub use crate::errors::{PlotError, Result};
+mod units;
+
+pub use crate::{
+    errors::{PlotError, Result},
+    shapes::{Ellipse, Point, Rectangle},
+    traits::{Palette, Style},
+    units::{Color, Srgb},
+};
+
+#[cfg(feature = "svg")]
+pub use crate::traits::to_svg::ToSvg;

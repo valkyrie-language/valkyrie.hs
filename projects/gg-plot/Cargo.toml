@@ -1,6 +1,6 @@
 [package]
-name = "bar-chart"
-version = "0.0.0"
+name = "ggplot"
+version = "0.1.2"
 authors = ["Aster <192607617@qq.com>"]
 description = "..."
 repository = "https://github.com/oovm/sub_projects"
@@ -14,6 +14,9 @@ exclude = ["package.json", "tests/**"]
 color-core = "0.1.6"
 svg = "0.14.0"
 indexmap = "2.1.0"
+
+[dependencies.ggplot-core]
+path = "../gg-core"
 
 [dev-dependencies]
 
