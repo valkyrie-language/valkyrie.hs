@@ -5,9 +5,6 @@
 #![doc(html_favicon_url = "https://raw.githubusercontent.com/oovm/shape-rs/dev/projects/images/Trapezohedron.svg")]
 
 mod errors;
-mod bar_chart;
-mod data;
+mod line_chart;
 
-mod axis;
-
-pub use crate::errors::{Error, Result};
+pub use crate::errors::{PlotError, Result};
