@@ -8,6 +8,7 @@ pub struct Point {
     pub y: f32,
 }
 
+/// A rectangle
 #[derive(Copy, Clone, Debug)]
 pub struct Rectangle {
     /// The x-coordinate of the upper left point
@@ -21,6 +22,7 @@ pub struct Rectangle {
     pub color: Color,
 }
 
+/// A ellipse
 #[derive(Copy, Clone, Debug)]
 pub struct Ellipse {
     /// The x-coordinate of the upper left point

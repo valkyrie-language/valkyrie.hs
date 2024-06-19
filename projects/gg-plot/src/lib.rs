@@ -9,3 +9,5 @@ mod property;
 
 mod axis;
 mod theme;
+
+pub use crate::charts::bar_chart::{BarChart, BarChartData, BarChartElement, BarChartType};

@@ -1,4 +1,4 @@
-use ggplot_core::Color;
+use ggplot_types::Color;
 
 pub struct ImageSize {
     pub x: f32,
